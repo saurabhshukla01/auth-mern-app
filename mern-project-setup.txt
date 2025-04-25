@@ -1,0 +1,107 @@
+Step by step setup in node Js & react Js :
+
+### How to create node project for backend >>>
+
+* how to create package.json file in node project >>
+# command is :  npm init -y
+
+* install three package >>
+commands is :
+# npm i express 
+# npm i mongoose   ( it helps to connect mongoDB to npm )
+# npm i nodemon
+
+* run server on node app >>
+# npx nodemon index.js
+
+----------------------------------------------------------------
+
+### How to create react project for frontend >>>
+
+* how to create project in react >>>
+# command is :  npx create-react-app frontend
+
+* how to install react router dom for navlinks
+# command is : npm i react-router-dom
+
+* how to run server in react frontend
+# command is : npm run start
+
+while set url link so i am getting broswer based error >>>
+
+## like this :  Cannot destructure property 'basename' of 'react__WEBPACK_IMPORTED_MODULE_0__.useContext(...)' as 
+it is null.
+
+* now how to fix this error to solve for the same >>>
+
+###  create Nav.js file >>
+
+Ex: 
+
+import React from 'react';
+import {Link} from 'react-router-dom';
+const Nav = () => {
+    return (
+        <div>
+            <ul>
+                <Link to="/">Home</Link>
+                <Link to="/">About</Link>
+            </ul>
+        </div>
+    )
+}
+
+export default Nav;'
+
+### after update index.js file >>
+
+Ex: 
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
+now its working to easy way.
+
+---------------------------------------------
+
+Install some package for node Js project >>  for mern auth app 
+
+# npm i express nodemon jsonwebtoken bcrypt body-parser dotenv mongoose joi cors
+
+express >>  node framework
+nodemon >>  nodemon is working like as automatically break and if code correct is working fine.
+jsonwebtoken  >>  auth validation token 
+bcrypt  >>  password bcrypt data
+body-parser  >>  parse data from body 
+dotenv  >>  create .env file for secreat data file here 
+mongoose  >>  mongoDB to connect with node database is mongoDB.
+joi  >>   for validation in server side
+cors  >>  cors is broswer token issue need to fix via this package
+
+After install all package it works to easy next .
+---------------------------------------------------------------
+
+update package.json file >>
+
+update script index inside this file >>
+
+"scripts": {
+  "start":"nodemon index.js"
+},
+  
+----------------------------------------------------------------
+
+
+
+
+ 
+
